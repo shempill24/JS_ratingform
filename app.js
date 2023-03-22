@@ -1,10 +1,10 @@
 const submit = document.querySelector("#submit");
 const landing = document.querySelector(".wrapper")
 const final = document.querySelector(".thanks_wrapper")
-
+let count = 0;
 
 submit.addEventListener("click", () => {
-    if(landing.classList.contains("wrapper")){
+    if(count > 0){
         landing.classList.add("none");
         final.classList.remove("none");
     }
@@ -24,6 +24,7 @@ rate.forEach((rate, idx) => {
         userRate.innerText = 0
         rate.classList.add("active");
         rate.classList.remove("hov");
+        count += 1
         userRate.innerText = (`${idx + 1}`);
         // document.querySelector(".rating").style.pointerEvents="none";
         
